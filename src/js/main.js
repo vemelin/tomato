@@ -1,4 +1,19 @@
 import "../scss/index.scss";
+
+// Main Hero Timer block
+import { RenderView } from  "./modules/View/View";
+
+const view = new RenderView ({
+  id: 'XXX-XXX-XXX',
+  name: 'Tomato Name',
+  inc: 0,
+})
+
+// Her Timer BLock controller
+import { HeroTimerController } from  "./modules/Controller/Controller";
+const timerControl = new HeroTimerController ('Controller')
+
+// Legacy Stuff
 let count = 0;
 const imp = ['default', 'important', 'so-so']
 document.querySelector('.button-importance').addEventListener('click', ({target}) => {
