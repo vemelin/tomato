@@ -2,12 +2,7 @@ import "../scss/index.scss";
 
 // Main Hero Timer block
 import { RenderView } from  "./modules/View/View";
-
-const view = new RenderView ({
-  id: 'XXX-XXX-XXX',
-  name: 'Tomato Name',
-  inc: 0,
-})
+const view = new RenderView ('View')
 
 // Her Timer BLock controller
 import { HeroTimerController } from  "./modules/Controller/Controller";
