@@ -1,12 +1,13 @@
-import "../scss/index.scss";
+import '../scss/index.scss'
+import tomato from './modules/Controller/Controller';
 
 // Main Hero Timer block
 import { RenderView } from  "./modules/View/View";
 const view = new RenderView ('View')
 
 // Her Timer BLock controller
-import { HeroTimerController } from  "./modules/Controller/Controller";
-const timerControl = new HeroTimerController ('Controller')
+// import { HeroTimerController } from  "./modules/Controller/Controller";
+// const timerControl = new HeroTimerController ('Controller')
 
 // Hero Tomato Timer
 import { TomatoTimer } from './modules/View/HeroTimerBlock';
@@ -35,7 +36,6 @@ const tomatoTimer = new TomatoTimer('.window__timer-text', {
     },
   ]
 })
-
 
 // Legacy Stuff
 let count = 0;
