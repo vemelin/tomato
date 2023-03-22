@@ -9,8 +9,31 @@
 
   <script defer src="js/main.js"></script>
   <title>Tomato timer</title>
+  <style>
+    #timer_display {
+    margin-bottom: 2vh;
+    text-align: center;
+}
+#timer_display_duration {
+    font-size: 15vmin;
+    margin-bottom: 2vh;
+}
+#timer_display_name {
+    font-size: 10vmin;
+}
+#timer_button_container {
+    margin-bottom: 2vh;
+    text-align: center;
+}
+#timer_button {
+    background-color: #FFFFFF;
+    color: #2a3439;
+    border: 0;
+    font-size: 10vmin;
+    padding: 0.25em 1em;
+}
+  </style>
 </head>
-<body>
   <header>
     <section class="header">
       <div class="container header__container">
@@ -104,6 +127,13 @@
       </div>
     </section>
   </main>
+  <body>
+    <div id="timer_display">
+      <div id="timer_display_duration">00:00</div>
+  </div>
+  <div id="timer_button_container">
+      <button type="button" id="timer_button">Start</button>
+  </div>
   <!-- modal with overlay -->
   <div class="modal-overlay">
     <div class="modal-delete">
