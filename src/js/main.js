@@ -14,7 +14,7 @@ class Timer
      * @param {String} name Timer display name.
      * @param {Number} duration_in_seconds Length of timer in seconds.
      */
-    constructor(name = 'Work', duration_in_seconds)
+    constructor(name = 'App', duration_in_seconds)
     {
         this._name = name;
         this._duration_in_seconds = duration_in_seconds;
@@ -278,50 +278,31 @@ const tomatoTimer = new TomatoTimer('.window__timer-text', {
   longBreak: 15,
   tasks: [
     {
-      "name": "Task Name 01",   
-      "description": 'Task description',   
-      "completed": false,
-      "priority": 'Medium',
+      'completed': false,
+      'id': '6d97c06c-0155-41e7-ae9e-791802e93b25',
+      'description': 'Task description',
+      'priority': 'higher',
+      'count': 1,
+      'timeLeft': 1500,
+      'started': false,
     },
     {
-      "name": "Task Name 02",   
-      "description": 'Task description',   
-      "completed": false,
-      "priority": 'Medium',
+      'completed': false,
+      'id': '247c446c-2862-4f8e-839a-55f92c1fee60',
+      'description': 'Task description',
+      'priority': 'medium',
+      'count': 2,
+      'timeLeft': 1500,
+      'started': false,
     },
     {
-      "name": "Task Name 03",   
-      "description": 'Task description',   
-      "completed": false,
-      "priority": 'Medium',
+      'completed': false,
+      'id': '247c446c-2862-4f8e-839a-55f92c1fee60',
+      'description': 'Task description',
+      'priority': 'low',
+      'count': 3,
+      'timeLeft': 1500,
+      'started': false,
     },
   ]
-})
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    // const timercpt = new PomodoroTimerComponent();
-    const timercpt = new PomodoroTimerComponent({
-        defaultTimerQueue: [
-            new Timer("Work", 5),
-            new Timer("Rest", 5)
-        ]
-    });
 });
-
-// Legacy Stuff
-let count = 0;
-const imp = ['default', 'important', 'so-so']
-document.querySelector('.button-importance').addEventListener('click', ({target}) => {
-  count += 1;
-  if (count >= imp.length) {
-    count = 0
-  }
-
-  for (let i = 0; i < imp.length; i++) {
-    if (count === i) {
-      target.classList.add(imp[i])
-    } else {
-      target.classList.remove(imp[i])
-    }
-  }
-})
